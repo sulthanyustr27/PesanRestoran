@@ -93,7 +93,7 @@
     <!-- Footer -->
     <footer class="bg-gray-200 p-4 mt-4">
         <div class="container mx-auto text-center text-gray-600">
-            Copyright © 2020 Rumah Makan Sederhana.
+            Copyright © 2024 Kendali Restoran.
         </div>
     </footer>
 </body>

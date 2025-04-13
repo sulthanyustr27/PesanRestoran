@@ -3,128 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pilih Restoran Favorit Anda</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
         body {
-            background-color: #f8f1e4;
-            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            padding: 60px 0;
             text-align: center;
-            padding-top: 50px;
-            position: flex;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
-        .background-wave {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg,rgb(154, 161, 255), #fad0c4);
-            clip-path: ellipse(100% 50% at 50% 0%);
-        }
-        
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .welcome-text {
-            animation: fadeIn 2s ease-in-out;
+        h1 {
+            color: white;
             font-size: 2.5rem;
-            font-weight: bold;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
         .restaurant-card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            cursor: pointer;
-            text-decoration: none;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
+        
         .restaurant-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .restaurant-card:hover .card-image img {
             transform: scale(1.05);
         }
-        .restaurant-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        
+        .card-content {
             padding: 20px;
         }
-        .footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
-            position: relative;
-        }
-        .rating {
-            color: #ffc107;
+        
+        .restaurant-name {
             font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
         }
-        .card-text {
+        
+        .restaurant-description {
+            color: #64748b;
             font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .rating {
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+        
+        .menu-link {
+            display: inline-block;
+            color: #6366F1;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .menu-link:hover {
+            color: #4f46e5;
+            text-decoration: underline;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #f3f4f6;
+            color: #4b5563;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <div class="background-wave"></div>
-    <div class="container position-relative">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="welcome-text text-white">Silakan Pilih Restoran Anda</h1>
-                <p class="fw-bolder fs-4">Pilih restoran favorit Anda dan nikmati hidangan terbaik!</p>
+    <header>
+        <div class="container">
+            <h1>Silakan Pilih Restoran Anda</h1>
+            <p class="subtitle">Pilih restoran favorit Anda dan nikmati hidangan terbaik!</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="restaurant-grid">
+            <!-- Restoran 1 -->
+            <div class="restaurant-card">
+                <div class="card-image">
+                    <img src="/api/placeholder/400/320" alt="Sate Khas Nusantara">
+                </div>
+                <div class="card-content">
+                    <h2 class="restaurant-name">Sate Khas Nusantara</h2>
+                    <div class="rating">★★★★★</div>
+                    <p class="restaurant-description">Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu kacang khas yang kaya rasa.</p>
+                    <div>
+                        <span class="tag">Lokal</span>
+                        <span class="tag">Sate</span>
+                        <span class="tag">Tradisional</span>
+                    </div>
+                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                </div>
+            </div>
+            
+            <!-- Restoran 2 -->
+            <div class="restaurant-card">
+                <div class="card-image">
+                    <img src="/api/placeholder/400/320" alt="Kelezatan Jepang">
+                </div>
+                <div class="card-content">
+                    <h2 class="restaurant-name">Sakura Bento</h2>
+                    <div class="rating">★★★★★</div>
+                    <p class="restaurant-description">Kelezatan Jepang dalam setiap gigitan! Menghadirkan hidangan khas Jepang seperti Chicken Katsu, Beef Yakiniku, dan Tempura yang otentik.</p>
+                    <div>
+                        <span class="tag">Jepang</span>
+                        <span class="tag">Sushi</span>
+                        <span class="tag">Katsu</span>
+                    </div>
+                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                </div>
+            </div>
+            
+            <!-- Restoran 3 -->
+            <div class="restaurant-card">
+                <div class="card-image">
+                    <img src="/api/placeholder/400/320" alt="Restoran C">
+                </div>
+                <div class="card-content">
+                    <h2 class="restaurant-name">Restoran C</h2>
+                    <div class="rating">★★★★☆</div>
+                    <p class="restaurant-description">Hidangan khas terbaik! Nikmati cita rasa autentik yang dibuat dengan bahan segar pilihan dan teknik memasak tradisional.</p>
+                    <div>
+                        <span class="tag">Fusion</span>
+                        <span class="tag">Modern</span>
+                    </div>
+                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                </div>
+            </div>
+            
+            <!-- Restoran 4 -->
+            <div class="restaurant-card">
+                <div class="card-image">
+                    <img src="/api/placeholder/400/320" alt="Restoran D">
+                </div>
+                <div class="card-content">
+                    <h2 class="restaurant-name">Restoran D</h2>
+                    <div class="rating">★★★★☆</div>
+                    <p class="restaurant-description">Menu spesial menanti Anda! Cicipi hidangan istimewa dengan sentuhan khas dari chef berpengalaman kami.</p>
+                    <div>
+                        <span class="tag">Lokal</span>
+                        <span class="tag">Spesial</span>
+                    </div>
+                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                </div>
+            </div>
+            
+            <!-- Restoran 5 -->
+            <div class="restaurant-card">
+                <div class="card-image">
+                    <img src="/api/placeholder/400/320" alt="Restoran E">
+                </div>
+                <div class="card-content">
+                    <h2 class="restaurant-name">Restoran E</h2>
+                    <div class="rating">★★★★☆</div>
+                    <p class="restaurant-description">Sensasi rasa luar biasa! Hidangan internasional dengan sentuhan lokal yang akan memanjakan lidah Anda.</p>
+                    <div>
+                        <span class="tag">Internasional</span>
+                        <span class="tag">Pasta</span>
+                    </div>
+                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                </div>
             </div>
         </div>
-        <div class="restaurant-container">
-            <a href="/pages/sate" class="card restaurant-card p-3" style="width: 18rem;" onclick="alert('Anda memilih Restoran Sate Mas Joko')">
-                <img src="img/sate.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text text-start">Sate Khas Nusantara – Warisan Rasa yang Melekat di Hati!
-                    Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu kacang khas yang kaya rasa. <br>  <span class="text-muted">Lihat menu lengkap...</span></p>
-                    <div class="rating text-start">★★★★★</div>
-                </div>
-            </a>
-            <a href="/pages/sakuraBento" class="card restaurant-card p-3" style="width: 18rem;"  onclick="alert('Anda memilih Restoran Sakura Bento')">
-                <img src="img/katsu.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text text-start">Kelezatan Jepang dalam Setiap Gigitan!
-                    "Sakura Bento" menghadirkan hidangan khas Jepang seperti Chicken Katsu, Beef Yakiniku, dan Tempura yang otentik. <br>  <span class="text-muted">Lihat menu lengkap...</span></p>
-                    <div class="rating text-start">★★★★★</div>
-                </div>
-            </a>
-            <a href="#" class="card restaurant-card p-3" style="width: 18rem;"  onclick="alert('Anda memilih Restoran C')">
-                <img src="img/iga.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text text-start">Restoran C - Hidangan khas terbaik! <br>  <span class="text-muted">Lihat menu lengkap...</span></p>
-                    <div class="rating text-start">★★★★☆</div>
-                </div>
-            </a>
-            <a href="#" class="card restaurant-card p-3" style="width: 18rem;"  onclick="alert('Anda memilih Restoran D')">
-                <img src="img/ayam.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text text-start">Restoran D - Menu spesial menanti Anda! <br>  <span class="text-muted">Lihat menu lengkap...</span></p>
-                    <div class="rating text-start">★★★☆☆</div>
-                </div>
-            </a>
-            <a href="#" class="card restaurant-card p-3" style="width: 18rem;"  onclick="alert('Anda memilih Restoran E')">
-                <img src="img/spageti.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text text-start">Restoran E - Sensasi rasa luar biasa! <br>  <span class="text-muted">Lihat menu lengkap...</span></p>
-                    <div class="rating text-start">★★★★★</div>
-                </div>
-            </a>
-        </div>
     </div>
-    <!-- footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Restoran Favorit. Semua Hak Dilindungi.</p>
-        <p>Hubungi kami: <a href="mailto:info@restoran.com" class="text-light">info@restoran.com</a></p>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Layanan Pemesanan Restoran. Semua hak dilindungi.</p>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
