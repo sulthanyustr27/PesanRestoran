@@ -8,4 +8,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('pages/sate', 'Home::sate');
 $routes->get('pages/sakuraBento', 'Home::sakuraBento');
+$routes->get('layout/admin', 'Home::admin');
 

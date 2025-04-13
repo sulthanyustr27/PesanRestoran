@@ -25,4 +25,11 @@ class Home extends BaseController
         ];
         return view ('pages/sakuraBento',$data);
     }
+
+    public function admin(){
+        $data = [
+            'title' => 'Admin'
+        ];
+        return view ('layout/admin',$data);
+    }
 }
