@@ -174,7 +174,7 @@
             <!-- Restoran 1 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/api/placeholder/400/320" alt="Sate Khas Nusantara">
+                    <img src="/img/sate.jpg" alt="Sate Khas Nusantara">
                 </div>
                 <div class="card-content">
                     <h2 class="restaurant-name">Sate Khas Nusantara</h2>
@@ -185,14 +185,14 @@
                         <span class="tag">Sate</span>
                         <span class="tag">Tradisional</span>
                     </div>
-                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                    <a href="pages/sate" class="cta-button">Lihat Menu Lengkap</a>
                 </div>
             </div>
             
             <!-- Restoran 2 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/api/placeholder/400/320" alt="Kelezatan Jepang">
+                    <img src="/img/katsu.jpg" alt="Kelezatan Jepang">
                 </div>
                 <div class="card-content">
                     <h2 class="restaurant-name">Sakura Bento</h2>
@@ -210,7 +210,7 @@
             <!-- Restoran 3 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/api/placeholder/400/320" alt="Restoran C">
+                    <img src="/img/iga.jpg" alt="Restoran C">
                 </div>
                 <div class="card-content">
                     <h2 class="restaurant-name">Restoran C</h2>
@@ -227,7 +227,7 @@
             <!-- Restoran 4 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/api/placeholder/400/320" alt="Restoran D">
+                    <img src="/img/ayam.jpg" alt="Restoran D">
                 </div>
                 <div class="card-content">
                     <h2 class="restaurant-name">Restoran D</h2>
@@ -244,7 +244,7 @@
             <!-- Restoran 5 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/api/placeholder/400/320" alt="Restoran E">
+                    <img src="/img/spageti.jpg" alt="Restoran E">
                 </div>
                 <div class="card-content">
                     <h2 class="restaurant-name">Restoran E</h2>
