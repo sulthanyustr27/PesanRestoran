@@ -203,7 +203,7 @@
                         <span class="tag">Sushi</span>
                         <span class="tag">Katsu</span>
                     </div>
-                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                    <a href="pages/sakuraBento" class="cta-button">Lihat Menu Lengkap</a>
                 </div>
             </div>
             
@@ -213,48 +213,48 @@
                     <img src="/img/iga.jpg" alt="Restoran C">
                 </div>
                 <div class="card-content">
-                    <h2 class="restaurant-name">Restoran C</h2>
+                    <h2 class="restaurant-name">Iga Bakar Pak E Iyan</h2>
                     <div class="rating">★★★★☆</div>
                     <p class="restaurant-description">Hidangan khas terbaik! Nikmati cita rasa autentik yang dibuat dengan bahan segar pilihan dan teknik memasak tradisional.</p>
                     <div>
                         <span class="tag">Fusion</span>
                         <span class="tag">Modern</span>
                     </div>
-                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                    <a href="pages/igaBakar" class="cta-button">Lihat Menu Lengkap</a>
                 </div>
             </div>
             
             <!-- Restoran 4 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/img/ayam.jpg" alt="Restoran D">
+                    <img src="/img/ayam.jpg" alt="Ayam Gepuk Mbah Nabhaan">
                 </div>
                 <div class="card-content">
-                    <h2 class="restaurant-name">Restoran D</h2>
+                    <h2 class="restaurant-name">Ayam Gepuk Mbah Nabhaan</h2>
                     <div class="rating">★★★★☆</div>
                     <p class="restaurant-description">Menu spesial menanti Anda! Cicipi hidangan istimewa dengan sentuhan khas dari chef berpengalaman kami.</p>
                     <div>
                         <span class="tag">Lokal</span>
                         <span class="tag">Spesial</span>
                     </div>
-                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                    <a href="pages/ayamGepuk" class="cta-button">Lihat Menu Lengkap</a>
                 </div>
             </div>
             
             <!-- Restoran 5 -->
             <div class="restaurant-card">
                 <div class="card-image">
-                    <img src="/img/spageti.jpg" alt="Restoran E">
+                    <img src="/img/spageti.jpg" alt="La Pasta Bella">
                 </div>
                 <div class="card-content">
-                    <h2 class="restaurant-name">Restoran E</h2>
+                    <h2 class="restaurant-name">La Pasta Bella</h2>
                     <div class="rating">★★★★☆</div>
                     <p class="restaurant-description">Sensasi rasa luar biasa! Hidangan internasional dengan sentuhan lokal yang akan memanjakan lidah Anda.</p>
                     <div>
                         <span class="tag">Internasional</span>
                         <span class="tag">Pasta</span>
                     </div>
-                    <a href="#" class="cta-button">Lihat Menu Lengkap</a>
+                    <a href="pages/pasta" class="cta-button">Lihat Menu Lengkap</a>
                 </div>
             </div>
         </div>

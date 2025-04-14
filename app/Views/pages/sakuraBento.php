@@ -1,180 +1,594 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Pemesanan Makanan dan Minuman</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan & Pembayaran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .restaurant-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-info {
+            flex: 1;
+        }
+        
+        .menu-item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .menu-item-price {
+            color: #6c5ce7;
+            font-weight: bold;
+        }
+        
+        .menu-item-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        
+        .quantity-btn {
+            background-color: #f0f0f0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+        
+        .add-btn {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .cart-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cart-item-info {
+            flex: 1;
+        }
+        
+        .cart-item-title {
+            font-weight: bold;
+        }
+        
+        .cart-item-price {
+            color: #6c5ce7;
+        }
+        
+        .remove-btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .cart-summary {
+            margin-top: 20px;
+            border-top: 1px dashed #ddd;
+            padding-top: 20px;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .summary-row.total {
+            font-weight: bold;
+            font-size: 18px;
+            color: #6c5ce7;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .payment-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-method {
+            margin-bottom: 20px;
+        }
+        
+        .payment-option {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .payment-option.selected {
+            border-color: #6c5ce7;
+            background-color: #f5f2ff;
+        }
+        
+        .payment-option input {
+            margin-right: 10px;
+        }
+        
+        .checkout-btn {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .section-title {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        
+        .back-btn {
+            background-color: transparent;
+            border: 1px solid #6c5ce7;
+            color: #6c5ce7;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .back-btn svg {
+            margin-right: 5px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-<header class="bg-orange-500 text-white p-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold"><a href="/">PEMESANAN MAKANAN DAN MINUMAN</a></h1>
-    <div class="flex items-center">
-        <span class="mr-2">Sakura Bento</span>
-        <i class="fas fa-user-circle text-2xl"></i>
-    </div>
-</header>
-<main class="p-4">
-    <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between">
-            <div class="w-full lg:w-2/3">
-                <h2 class="text-lg font-semibold mb-4">Silahkan Pilih Menu Makanan dan Minuman</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-white p-4 rounded shadow">
-                        <img alt="Paket Nasi Timbel Komplit" class="w-full h-40 object-cover mb-4"
-                             src="https://storage.googleapis.com/a1aa/image/bNbTfRTfrPanxa-mNmpu1GIhfzdHfIuazDOr2g0uZGA.jpg"/>
-                        <p class="text-center font-semibold">Rp. 25.000</p>
-                        <p class="text-center mb-4">PAKET NASI TIMBEL KOMPLIT</p>
-                        <button class="bg-blue-500 text-white py-2 px-4 rounded w-full pilih-btn"
-                                data-menu="PAKET NASI TIMBEL KOMPLIT" data-harga="25000">Pilih
-                        </button>
-                    </div>
-                    <div class="bg-white p-4 rounded shadow">
-                        <img alt="Paket Nasi Tutug Oncom" class="w-full h-40 object-cover mb-4"
-                             src="https://storage.googleapis.com/a1aa/image/skLcZry9LZHNgtwUpKeTZCSneHQIeZIyWMjIv6koZAA.jpg"/>
-                        <p class="text-center font-semibold">Rp. 25.000</p>
-                        <p class="text-center mb-4">PAKET NASI TUTUG ONCOM</p>
-                        <button class="bg-blue-500 text-white py-2 px-4 rounded w-full pilih-btn"
-                                data-menu="PAKET NASI TUTUG ONCOM" data-harga="25000">Pilih
-                        </button>
-                    </div>
-                    <div class="bg-white p-4 rounded shadow">
-                        <img alt="Paket Nasi Tutug Oncom" class="w-full h-40 object-cover mb-4"
-                             src="https://storage.googleapis.com/a1aa/image/skLcZry9LZHNgtwUpKeTZCSneHQIeZIyWMjIv6koZAA.jpg"/>
-                        <p class="text-center font-semibold">Rp. 5.000</p>
-                        <p class="text-center mb-4">Es teh</p>
-                        <button class="bg-blue-500 text-white py-2 px-4 rounded w-full pilih-btn"
-                                data-menu="Es teh" data-harga="5000">Pilih
-                        </button>
-                    </div>
-                    <div class="bg-white p-4 rounded shadow">
-                        <img alt="Paket Nasi Tutug Oncom" class="w-full h-40 object-cover mb-4"
-                             src="https://storage.googleapis.com/a1aa/image/skLcZry9LZHNgtwUpKeTZCSneHQIeZIyWMjIv6koZAA.jpg"/>
-                        <p class="text-center font-semibold">Rp. 105.000</p>
-                        <p class="text-center mb-4">Sate</p>
-                        <button class="bg-blue-500 text-white py-2 px-4 rounded w-full pilih-btn"
-                                data-menu="Sate" data-harga="105000">Pilih
-                        </button>
-                    </div>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="window.history.back()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"></path>
+            </svg>
+            Kembali
+        </button>
+        
+        <div class="header">
+            <h1>Pesanan & Pembayaran</h1>
+            <p>Pilih menu favorit Anda dan lakukan pembayaran</p>
+        </div>
+        
+        <div class="restaurant-info">
+            <h2 id="restaurant-name">Sate Khas Nusantara</h2>
+            <div class="rating">★★★★★</div>
+            <p id="restaurant-desc">Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu tradisional.</p>
+        </div>
+        
+        <div class="menu-section">
+            <h3 class="section-title">Menu</h3>
+            
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Sate Ayam</div>
+                    <div class="menu-item-desc">10 tusuk sate ayam dengan bumbu kacang</div>
+                    <div class="menu-item-price">Rp 20.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Sate Ayam', 20000)">+ Tambah</button>
                 </div>
             </div>
-            <div class="w-full lg:w-1/3 mt-8 lg:mt-0">
-                        <h2 class="text-lg font-semibold mb-4">Pesanan Anda</h2>
-                        <div class="bg-white p-4 rounded shadow">
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-gray-700" for="name">Atas Nama</label>
-                                <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="name" type="text" value="Sulthan"/>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-gray-700" for="order-code">Kode Pemesanan</label>
-                                <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="order-code" type="text" value="PSN0822100001"/>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-gray-700" for="table-number">No Meja</label>
-                                <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="table-number" placeholder="No Meja" type="text"/>
-                            </div>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full bg-white" id="order-table">
-                                    <thead>
-                                    <tr>
-                                        <th class="px-4 py-2">Hapus</th>
-                                        <th class="px-4 py-2">Menu</th>
-                                        <th class="px-4 py-2">Jumlah</th>
-                                        <th class="px-4 py-2">Harga</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <!-- Initially empty, rows will be added dynamically -->
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="flex justify-between items-center mt-4">
-                                <span class="font-semibold" id="total-price">TOTAL: Rp.0</span>
-                            </div>
-                            <div class="flex justify-between mt-4">
-                                <button class="bg-green-500 text-white py-2 px-4 rounded" id="order-btn">ORDER</button>
-                                <button class="bg-yellow-500 text-white py-2 px-4 rounded" id="ubah-btn">Ubah Pesanan</button>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Sate Kambing</div>
+                    <div class="menu-item-desc">10 tusuk sate kambing dengan bumbu kacang spesial</div>
+                    <div class="menu-item-price">Rp 45.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Sate Kambing', 45000)">+ Tambah</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Sate Maranggi</div>
+                    <div class="menu-item-desc">10 tusuk sate maranggi dengan kecap manis</div>
+                    <div class="menu-item-price">Rp 40.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Sate Maranggi', 40000)">+ Tambah</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Nasi Putih</div>
+                    <div class="menu-item-desc">Nasi putih pulen</div>
+                    <div class="menu-item-price">Rp 5.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Nasi Putih', 5000)">+ Tambah</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Es Teh Manis</div>
+                    <div class="menu-item-desc">Teh manis dingin</div>
+                    <div class="menu-item-price">Rp 7.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 7000)">+ Tambah</button>
                 </div>
             </div>
         </div>
+        
+        <div class="cart-section">
+            <h3 class="section-title">Pesanan Anda</h3>
+            
+            <div id="cart-items">
+                <div class="empty-cart">
+                    <p>Keranjang Anda masih kosong</p>
+                    <p>Silakan tambahkan menu dari daftar di atas</p>
+                </div>
+            </div>
+            
+            <div id="cart-summary" class="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <div>Subtotal</div>
+                    <div id="subtotal">Rp 0</div>
+                </div>
+                <div class="summary-row"> 
+                    <div>Biaya Pengiriman (Hanya Kota Semarang)</div>
+                    <div id="delivery-fee">Rp 25.000</div>
+                </div> 
+                <div class="summary-row">
+                    <div>Pajak (10%)</div>
+                    <div id="tax">Rp 0</div>
+                </div>
+                <div class="summary-row total">
+                    <div>Total</div>
+                    <div id="total">Rp 0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="payment-section" class="payment-section" style="display: none;">
+            <h3 class="section-title">Metode Pembayaran</h3>
+            
+            <div class="payment-method">
+                <div class="payment-option selected" onclick="selectPayment(this)">
+                    <input type="radio" name="payment" id="cash" checked>
+                    <label for="cash">Tunai</label>
+                </div>
+                
+                <div class="payment-option" onclick="selectPayment(this)">
+                    <input type="radio" name="payment" id="ovo">
+                    <label for="ovo">OVO</label>
+                </div>
+                
+                <div class="payment-option" onclick="selectPayment(this)">
+                    <input type="radio" name="payment" id="gopay">
+                    <label for="gopay">GoPay</label>
+                </div>
+                
+                <div class="payment-option" onclick="selectPayment(this)">
+                    <input type="radio" name="payment" id="dana">
+                    <label for="dana">DANA</label>
+                </div>
+                
+                <div class="payment-option" onclick="selectPayment(this)">
+                    <input type="radio" name="payment" id="bank-transfer">
+                    <label for="bank-transfer">Transfer Bank</label>
+                </div>
+            </div>
+            
+            <button class="checkout-btn" onclick="checkout()">Bayar Sekarang</button>
+        </div>
     </div>
-</main>
-
-<!-- back end -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const pilihButtons = document.querySelectorAll('.pilih-btn');
-        const orderTable = document.getElementById('order-table').getElementsByTagName('tbody')[0];
-        const totalPriceElement = document.getElementById('total-price');
-        let totalPrice = 25000;
-
-        pilihButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const menu = this.getAttribute('data-menu');
-                const harga = parseInt(this.getAttribute('data-harga'));
-
-                let existingRow = null;
-                const rows = orderTable.getElementsByTagName('tr');
-                for (let i = 0; i < rows.length; i++) {
-                    if (rows[i].cells[1].textContent === menu) {
-                        existingRow = rows[i];
-                        break;
-                    }
-                }
-
-                if (existingRow) {
-                    const jumlahCell = existingRow.cells[2];
-                    const hargaCell = existingRow.cells[3];
-                    const jumlah = parseInt(jumlahCell.textContent) + 1;
-                    jumlahCell.textContent = jumlah;
-                    hargaCell.textContent = harga * jumlah;
-                } else {
-                    const newRow = orderTable.insertRow();
-                    newRow.innerHTML = `
-                        <td class="border px-4 py-2 text-center">
-                            <i class="fas fa-trash text-red-500 hapus-btn"></i>
-                        </td>
-                        <td class="border px-4 py-2">${menu}</td>
-                        <td class="border px-4 py-2 text-center">1</td>
-                        <td class="border px-4 py-2 text-right">${harga}</td>
-                    `;
-
-                    newRow.querySelector('.hapus-btn').addEventListener('click', function () {
-                        const row = this.closest('tr');
-                        const price = parseInt(row.cells[3].textContent);
-                        totalPrice -= price;
-                        totalPriceElement.textContent = `TOTAL: Rp.${totalPrice}`;
-                        row.remove();
-                    });
-                }
-
-                totalPrice += harga;
-                totalPriceElement.textContent = `TOTAL: Rp.${totalPrice}`;
+    
+    <script>
+        let cart = [];
+        let deliveryFee = 25000;
+        let taxRate = 0.1;
+        
+        function formatRupiah(amount) {
+            return 'Rp ' + amount.toLocaleString('id-ID');
+        }
+        
+        function addToCart(name, price) {
+            let existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCart();
+        }
+        
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+        
+        function updateQuantity(index, newQuantity) {
+            if (newQuantity <= 0) {
+                removeFromCart(index);
+            } else {
+                cart[index].quantity = newQuantity;
+                updateCart();
+            }
+        }
+        
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cart-items');
+            const cartSummaryElement = document.getElementById('cart-summary');
+            const paymentSectionElement = document.getElementById('payment-section');
+            
+            if (cart.length === 0) {
+                cartItemsElement.innerHTML = `
+                    <div class="empty-cart">
+                        <p>Keranjang Anda masih kosong</p>
+                        <p>Silakan tambahkan menu dari daftar di atas</p>
+                    </div>
+                `;
+                cartSummaryElement.style.display = 'none';
+                paymentSectionElement.style.display = 'none';
+                return;
+            }
+            
+            let cartHTML = '';
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                
+                cartHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <div class="cart-item-title">${item.name}</div>
+                            <div class="cart-item-price">${formatRupiah(item.price)} x ${item.quantity}</div>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
+                            <input class="quantity-input" type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, parseInt(this.value))">
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(${index})">Hapus</button>
+                    </div>
+                `;
             });
-        });
-
-        document.getElementById('order-btn').addEventListener('click', function () {
-            alert('Order placed successfully!');
-        });
-
-        document.getElementById('ubah-btn').addEventListener('click', function () {
-            alert('Order updated successfully!');
-        });
-
-        document.querySelectorAll('.hapus-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const row = this.closest('tr');
-                const price = parseInt(row.cells[3].textContent);
-                totalPrice -= price;
-                totalPriceElement.textContent = `TOTAL: Rp.${totalPrice}`;
-                row.remove();
+            
+            cartItemsElement.innerHTML = cartHTML;
+            
+            let subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            let tax = subtotal * taxRate;
+            let total = subtotal + tax + deliveryFee;
+            
+            document.getElementById('subtotal').textContent = formatRupiah(subtotal);
+            document.getElementById('tax').textContent = formatRupiah(tax);
+            document.getElementById('total').textContent = formatRupiah(total);
+            
+            cartSummaryElement.style.display = 'block';
+            paymentSectionElement.style.display = 'block';
+        }
+        
+        function selectPayment(element) {
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('selected');
             });
-        });
-    });
-
-</script>
+            
+            element.classList.add('selected');
+            element.querySelector('input').checked = true;
+        }
+        
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Silakan tambahkan menu ke keranjang terlebih dahulu.');
+                return;
+            }
+            
+            const selectedPayment = document.querySelector('input[name="payment"]:checked').id;
+            
+            alert(`Terima kasih atas pesanan Anda!\nPesanan Anda sedang diproses.\nMetode pembayaran: ${selectedPayment}`);
+            
+            // Reset cart
+            cart = [];
+            updateCart();
+        }
+        
+        // Toggle between restaurants (just for demo)
+        function changeRestaurant(name) {
+            const restaurantName = document.getElementById('restaurant-name');
+            const restaurantDesc = document.getElementById('restaurant-desc');
+            
+            if (name === 'sakura') {
+                restaurantName.textContent = 'Sakura Bento';
+                restaurantDesc.textContent = 'Kelezatan Jepang dalam setiap gigitan! Menghadirkan hidangan khas Jepang seperti Chicken Katsu, Beef Yakiniku, dan Tempura yang otentik.';
+                
+                // Change menu items
+                document.querySelector('.menu-section').innerHTML = `
+                    <h3 class="section-title">Menu</h3>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-title">Chicken Katsu</div>
+                            <div class="menu-item-desc">Ayam katsu renyah dengan saus tonkatsu</div>
+                            <div class="menu-item-price">Rp 50.000</div>
+                        </div>
+                        <div class="menu-item-actions">
+                            <button class="add-btn" onclick="addToCart('Chicken Katsu', 50000)">+ Tambah</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-title">Beef Yakiniku</div>
+                            <div class="menu-item-desc">Daging sapi panggang dengan saus yakiniku</div>
+                            <div class="menu-item-price">Rp 65.000</div>
+                        </div>
+                        <div class="menu-item-actions">
+                            <button class="add-btn" onclick="addToCart('Beef Yakiniku', 65000)">+ Tambah</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-title">Tempura Udang</div>
+                            <div class="menu-item-desc">5 buah tempura udang dengan saus tentsuyu</div>
+                            <div class="menu-item-price">Rp 45.000</div>
+                        </div>
+                        <div class="menu-item-actions">
+                            <button class="add-btn" onclick="addToCart('Tempura Udang', 45000)">+ Tambah</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-title">Salmon Sushi</div>
+                            <div class="menu-item-desc">8 pcs salmon sushi</div>
+                            <div class="menu-item-price">Rp 70.000</div>
+                        </div>
+                        <div class="menu-item-actions">
+                            <button class="add-btn" onclick="addToCart('Salmon Sushi', 70000)">+ Tambah</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-title">Ocha</div>
+                            <div class="menu-item-desc">Teh hijau Jepang</div>
+                            <div class="menu-item-price">Rp 15.000</div>
+                        </div>
+                        <div class="menu-item-actions">
+                            <button class="add-btn" onclick="addToCart('Ocha', 15000)">+ Tambah</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                restaurantName.textContent = 'Sate Khas Nusantara';
+                restaurantDesc.textContent = 'Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu tradisional.';
+                
+                // Reset to default menu
+                location.reload();
+            }
+            
+            // Clear cart when switching restaurants
+            cart = [];
+            updateCart();
+        }
+    </script>
 </body>
 </html>

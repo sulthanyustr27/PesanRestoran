@@ -30,6 +30,30 @@ class Home extends BaseController
         $data = [
             'title' => 'Admin'
         ];
-        return view ('layout/admin',$data);
+        return view ('head/admin',$data);
     }
+
+    public function igaBakar(){
+        $data = [
+            'title' => 'Iga Bakar'
+        ];
+        return view ('pages/igaBakar',$data);
+    }
+
+
+    public function ayamGepuk(){
+        $data = [
+            'title' => 'Ayam Gepuk'
+        ];
+        return view ('pages/ayamGepuk',$data);
+    }
+
+
+    public function pasta(){
+        $data = [
+            'title' => 'La Pasta Bella'
+        ];
+        return view ('pages/pasta',$data);
+    }
+
 }
