@@ -266,68 +266,104 @@
         </div>
         
         <div class="restaurant-info">
-            <h2 id="restaurant-name">Sate Khas Nusantara</h2>
-            <div class="rating">★★★★★</div>
-            <p id="restaurant-desc">Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu tradisional.</p>
+            <h2 id="restaurant-name">Ayam Gepuk</h2>
+            <div class="rating">★★★★☆</div>
+            <p id="restaurant-desc">Nikmati ayam gepuk yang gurih dan pedas, dengan bumbu khas yang menggugah selera. Ayam yang digoreng crispy, disajikan dengan sambal terasi pedas, nasi putih, dan lalapan segar.</p>
         </div>
+
         
         <div class="menu-section">
             <h3 class="section-title">Menu</h3>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Ayam</div>
-                    <div class="menu-item-desc">10 tusuk sate ayam dengan bumbu kacang</div>
+                    <div class="menu-item-title">Ayam Gepuk Original</div>
+                    <div class="menu-item-desc">Ayam goreng crispy dengan bumbu gepuk yang pedas manis, disajikan dengan nasi putih dan sambal khas.</div>
                     <div class="menu-item-price">Rp 35.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Ayam', 35000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Ayam Gepuk Original', 35000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Kambing</div>
-                    <div class="menu-item-desc">10 tusuk sate kambing dengan bumbu kacang spesial</div>
-                    <div class="menu-item-price">Rp 45.000</div>
+                    <div class="menu-item-title">Ayam Gepuk Spicy</div>
+                    <div class="menu-item-desc">Ayam goreng dengan bumbu gepuk ekstra pedas, untuk yang suka tantangan rasa pedas.</div>
+                    <div class="menu-item-price">Rp 38.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Kambing', 45000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Ayam Gepuk Spicy', 38000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Maranggi</div>
-                    <div class="menu-item-desc">10 tusuk sate maranggi dengan kecap manis</div>
+                    <div class="menu-item-title">Ayam Gepuk Terasi</div>
+                    <div class="menu-item-desc">Ayam goreng dengan bumbu gepuk terasi yang gurih dan pedas, cocok untuk penyuka sambal terasi.</div>
                     <div class="menu-item-price">Rp 40.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Maranggi', 40000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Ayam Gepuk Terasi', 40000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Nasi Putih</div>
-                    <div class="menu-item-desc">Nasi putih pulen</div>
-                    <div class="menu-item-price">Rp 5.000</div>
+                    <div class="menu-item-title">Ayam Gepuk Madu</div>
+                    <div class="menu-item-desc">Ayam goreng dengan bumbu gepuk madu yang manis dan gurih, disajikan dengan nasi dan sambal.</div>
+                    <div class="menu-item-price">Rp 42.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Nasi Putih', 5000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Ayam Gepuk Madu', 42000)">+ Tambah</button>
                 </div>
             </div>
-            
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Ayam Bakar Gepuk</div>
+                    <div class="menu-item-desc">Ayam bakar dengan bumbu gepuk yang kaya rasa, disajikan dengan nasi dan lalapan.</div>
+                    <div class="menu-item-price">Rp 45.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Ayam Bakar Gepuk', 45000)">+ Tambah</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Ayam Gepuk Penyet</div>
+                    <div class="menu-item-desc">Ayam gepuk yang dipenyet dengan sambal terasi pedas, disajikan dengan nasi hangat dan lalapan segar.</div>
+                    <div class="menu-item-price">Rp 38.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Ayam Gepuk Penyet', 38000)">+ Tambah</button>
+                </div>
+            </div>
+
+            <!-- Minuman Es Teh Manis dan Es Teh Tawar -->
             <div class="menu-item">
                 <div class="menu-item-info">
                     <div class="menu-item-title">Es Teh Manis</div>
-                    <div class="menu-item-desc">Teh manis dingin</div>
+                    <div class="menu-item-desc">Teh manis dingin yang menyegarkan, pas untuk menemani ayam gepuk.</div>
+                    <div class="menu-item-price">Rp 8.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 8000)">+ Tambah</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Es Teh Tawar</div>
+                    <div class="menu-item-desc">Teh tawar dingin, segar dan bebas gula, cocok untuk yang ingin pilihan yang lebih ringan.</div>
                     <div class="menu-item-price">Rp 7.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 7000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Es Teh Tawar', 7000)">+ Tambah</button>
                 </div>
             </div>
+
         </div>
         
         <div class="cart-section">

@@ -266,68 +266,104 @@
         </div>
         
         <div class="restaurant-info">
-            <h2 id="restaurant-name">Sate Khas Nusantara</h2>
-            <div class="rating">★★★★★</div>
-            <p id="restaurant-desc">Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu tradisional.</p>
+            <h2 id="restaurant-name">La Pasta Bella</h2>
+            <div class="rating">★★★★☆</div>
+            <p id="restaurant-desc">Nikmati sajian pasta Italia yang autentik di La Pasta Bella. Setiap hidangan disiapkan dengan bahan-bahan segar dan resep tradisional, menciptakan pengalaman kuliner yang memukau.</p>
         </div>
+
         
         <div class="menu-section">
             <h3 class="section-title">Menu</h3>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Ayam</div>
-                    <div class="menu-item-desc">10 tusuk sate ayam dengan bumbu kacang</div>
-                    <div class="menu-item-price">Rp 35.000</div>
+                    <div class="menu-item-title">Spaghetti Carbonara</div>
+                    <div class="menu-item-desc">Spaghetti yang lembut disajikan dengan saus carbonara krimi, bacon crispy, dan taburan keju parmesan.</div>
+                    <div class="menu-item-price">Rp 50.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Ayam', 35000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Spaghetti Carbonara', 50000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Kambing</div>
-                    <div class="menu-item-desc">10 tusuk sate kambing dengan bumbu kacang spesial</div>
+                    <div class="menu-item-title">Fettuccine Alfredo</div>
+                    <div class="menu-item-desc">Fettuccine pasta dengan saus alfredo yang creamy, disajikan dengan potongan ayam panggang dan jamur.</div>
+                    <div class="menu-item-price">Rp 55.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Fettuccine Alfredo', 55000)">+ Tambah</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Penne Arrabbiata</div>
+                    <div class="menu-item-desc">Penne pasta dengan saus tomat pedas, bawang putih, dan cabai, cocok untuk yang menyukai rasa pedas.</div>
                     <div class="menu-item-price">Rp 45.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Kambing', 45000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Penne Arrabbiata', 45000)">+ Tambah</button>
                 </div>
             </div>
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Lasagna Beef</div>
+                    <div class="menu-item-desc">Lasagna lapis daging sapi dengan saus bolognese yang kaya rasa, keju leleh, dan lapisan pasta yang kenyal.</div>
+                    <div class="menu-item-price">Rp 60.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Lasagna Beef', 60000)">+ Tambah</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Linguine Seafood</div>
+                    <div class="menu-item-desc">Linguine pasta dengan saus putih dan campuran seafood segar seperti udang dan cumi-cumi.</div>
+                    <div class="menu-item-price">Rp 65.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Linguine Seafood', 65000)">+ Tambah</button>
+                </div>
+            </div>
+
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Maranggi</div>
-                    <div class="menu-item-desc">10 tusuk sate maranggi dengan kecap manis</div>
-                    <div class="menu-item-price">Rp 40.000</div>
+                    <div class="menu-item-title">Lemonade</div>
+                    <div class="menu-item-desc">Minuman lemon segar dengan sedikit manis, menyegarkan dan cocok menemani pasta Anda.</div>
+                    <div class="menu-item-price">Rp 15.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Maranggi', 40000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Lemonade', 15000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Nasi Putih</div>
-                    <div class="menu-item-desc">Nasi putih pulen</div>
-                    <div class="menu-item-price">Rp 5.000</div>
+                    <div class="menu-item-title">Sparkling Water</div>
+                    <div class="menu-item-desc">Air mineral berkarbonasi, memberikan rasa segar dan ringan setelah menikmati pasta.</div>
+                    <div class="menu-item-price">Rp 12.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Nasi Putih', 5000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Sparkling Water', 12000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Es Teh Manis</div>
-                    <div class="menu-item-desc">Teh manis dingin</div>
-                    <div class="menu-item-price">Rp 7.000</div>
+                    <div class="menu-item-title">Iced Tea Lemon</div>
+                    <div class="menu-item-desc">Teh dingin dengan rasa lemon yang menyegarkan, ideal untuk mengimbangi rasa creamy dari pasta.</div>
+                    <div class="menu-item-price">Rp 10.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 7000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Iced Tea Lemon', 10000)">+ Tambah</button>
                 </div>
             </div>
+
         </div>
         
         <div class="cart-section">

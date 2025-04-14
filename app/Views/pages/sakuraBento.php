@@ -266,9 +266,9 @@
         </div>
         
         <div class="restaurant-info">
-            <h2 id="restaurant-name">Sate Khas Nusantara</h2>
+            <h2 id="restaurant-name">Sakura Bento</h2>
             <div class="rating">★★★★★</div>
-            <p id="restaurant-desc">Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu tradisional.</p>
+            <p id="restaurant-desc">Krispi di luar, juicy di dalam – bento yang bikin nagih!</p>
         </div>
         
         <div class="menu-section">
@@ -276,56 +276,56 @@
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Ayam</div>
-                    <div class="menu-item-desc">10 tusuk sate ayam dengan bumbu kacang</div>
-                    <div class="menu-item-price">Rp 20.000</div>
+                    <div class="menu-item-title">Chicken Katsu Bento</div>
+                    <div class="menu-item-desc">Ayam fillet digoreng tepung renyah, disajikan dengan nasi, salad kol, dan saus katsu spesial.</div>
+                    <div class="menu-item-price">Rp 35.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Ayam', 20000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Chicken Katsu Bento', 35000)">+ Tambah</button>
                 </div>
             </div>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Kambing</div>
-                    <div class="menu-item-desc">10 tusuk sate kambing dengan bumbu kacang spesial</div>
-                    <div class="menu-item-price">Rp 45.000</div>
+                    <div class="menu-item-title">Beef Katsu Bento</div>
+                    <div class="menu-item-desc">Daging sapi pilihan dibalur tepung dan digoreng renyah, lengkap dengan nasi dan tumisan sayur.</div>
+                    <div class="menu-item-price">Rp 42.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Kambing', 45000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Beef Katsu Bento', 42000)">+ Tambah</button>
                 </div>
             </div>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Maranggi</div>
-                    <div class="menu-item-desc">10 tusuk sate maranggi dengan kecap manis</div>
-                    <div class="menu-item-price">Rp 40.000</div>
+                    <div class="menu-item-title">Cheese Chicken Katsu Bento</div>
+                    <div class="menu-item-desc">Chicken katsu dengan isian keju leleh di dalamnya, makin nikmat dengan saus creamy mayo.</div>
+                    <div class="menu-item-price">Rp 38.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Maranggi', 40000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Cheese Chicken Katsu Bento', 38000)">+ Tambah</button>
                 </div>
             </div>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Nasi Putih</div>
-                    <div class="menu-item-desc">Nasi putih pulen</div>
-                    <div class="menu-item-price">Rp 5.000</div>
+                    <div class="menu-item-title">Sencha (Green Tea)</div>
+                    <div class="menu-item-desc">Teh hijau khas Jepang, harum dan menyegarkan, cocok menemani setiap hidangan.</div>
+                    <div class="menu-item-price">Rp 10.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Nasi Putih', 5000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Sencha (Green Tea)', 10000)">+ Tambah</button>
                 </div>
             </div>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Es Teh Manis</div>
-                    <div class="menu-item-desc">Teh manis dingin</div>
-                    <div class="menu-item-price">Rp 7.000</div>
+                    <div class="menu-item-title">Iced Sencha</div>
+                    <div class="menu-item-desc">Sencha dingin yang menyegarkan, sangat cocok untuk cuaca panas.</div>
+                    <div class="menu-item-price">Rp 12.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 7000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Iced Sencha', 12000)">+ Tambah</button>
                 </div>
             </div>
         </div>

@@ -200,7 +200,6 @@
                     <p class="restaurant-description">Kelezatan Jepang dalam setiap gigitan! Menghadirkan hidangan khas Jepang seperti Chicken Katsu, Beef Yakiniku, dan Tempura yang otentik.</p>
                     <div>
                         <span class="tag">Jepang</span>
-                        <span class="tag">Sushi</span>
                         <span class="tag">Katsu</span>
                     </div>
                     <a href="pages/sakuraBento" class="cta-button">Lihat Menu Lengkap</a>

@@ -266,68 +266,80 @@
         </div>
         
         <div class="restaurant-info">
-            <h2 id="restaurant-name">Sate Khas Nusantara</h2>
-            <div class="rating">★★★★★</div>
-            <p id="restaurant-desc">Warisan rasa yang melekat di hati! Di "Sate Mas Joko", kami menyajikan sate dengan daging pilihan yang dibakar sempurna, berpadu dengan bumbu tradisional.</p>
+            <h2 id="restaurant-name">Iga Bakar</h2>
+            <div class="rating">★★★★☆</div>
+            <p id="restaurant-desc">Nikmati iga bakar dengan bumbu khas yang menggugah selera. Daging iga yang empuk, dibakar sempurna, dan disajikan dengan berbagai pilihan saus yang lezat.</p>
         </div>
-        
+
         <div class="menu-section">
             <h3 class="section-title">Menu</h3>
             
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Ayam</div>
-                    <div class="menu-item-desc">10 tusuk sate ayam dengan bumbu kacang</div>
-                    <div class="menu-item-price">Rp 35.000</div>
+                    <div class="menu-item-title">Iga Bakar Original</div>
+                    <div class="menu-item-desc">Iga sapi yang dibakar dengan bumbu khas, disajikan dengan nasi dan sambal terasi.</div>
+                    <div class="menu-item-price">Rp 55.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Ayam', 35000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Iga Bakar Original', 55000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Kambing</div>
-                    <div class="menu-item-desc">10 tusuk sate kambing dengan bumbu kacang spesial</div>
-                    <div class="menu-item-price">Rp 45.000</div>
+                    <div class="menu-item-title">Iga Bakar Teriyaki</div>
+                    <div class="menu-item-desc">Iga bakar dengan saus teriyaki manis dan gurih, disajikan dengan nasi putih dan sayuran.</div>
+                    <div class="menu-item-price">Rp 60.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Kambing', 45000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Iga Bakar Teriyaki', 60000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Sate Maranggi</div>
-                    <div class="menu-item-desc">10 tusuk sate maranggi dengan kecap manis</div>
-                    <div class="menu-item-price">Rp 40.000</div>
+                    <div class="menu-item-title">Iga Bakar Pedas Manis</div>
+                    <div class="menu-item-desc">Iga sapi yang dibakar dengan saus pedas manis, cocok untuk pecinta rasa pedas.</div>
+                    <div class="menu-item-price">Rp 58.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Sate Maranggi', 40000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Iga Bakar Pedas Manis', 58000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
-                    <div class="menu-item-title">Nasi Putih</div>
-                    <div class="menu-item-desc">Nasi putih pulen</div>
-                    <div class="menu-item-price">Rp 5.000</div>
+                    <div class="menu-item-title">Iga Bakar Madu</div>
+                    <div class="menu-item-desc">Iga sapi dibakar dengan saus madu yang memberikan rasa manis dan gurih, disajikan dengan nasi dan acar.</div>
+                    <div class="menu-item-price">Rp 62.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Nasi Putih', 5000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Iga Bakar Madu', 62000)">+ Tambah</button>
                 </div>
             </div>
-            
+
             <div class="menu-item">
                 <div class="menu-item-info">
                     <div class="menu-item-title">Es Teh Manis</div>
-                    <div class="menu-item-desc">Teh manis dingin</div>
+                    <div class="menu-item-desc">Teh manis dingin yang menyegarkan, pas untuk menemani iga bakar.</div>
+                    <div class="menu-item-price">Rp 8.000</div>
+                </div>
+                <div class="menu-item-actions">
+                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 8000)">+ Tambah</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <div class="menu-item-title">Es Teh Tawar</div>
+                    <div class="menu-item-desc">Teh tawar dingin, segar dan bebas gula, cocok untuk yang ingin pilihan yang lebih ringan.</div>
                     <div class="menu-item-price">Rp 7.000</div>
                 </div>
                 <div class="menu-item-actions">
-                    <button class="add-btn" onclick="addToCart('Es Teh Manis', 7000)">+ Tambah</button>
+                    <button class="add-btn" onclick="addToCart('Es Teh Tawar', 7000)">+ Tambah</button>
                 </div>
             </div>
+
         </div>
         
         <div class="cart-section">
